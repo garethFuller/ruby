@@ -3,8 +3,10 @@
 class A
 
   attr_accessor :name, :descr
+  # needs to be defined outside of the initilize function as instance vars
+  # cannot be included in 'insatnce methods' and initilize is one of them
   @@instance = 0
-  
+
   def initialize(name, descr)
     @name = name
     @descr = descr
@@ -20,6 +22,7 @@ class A
 
 end
 
+# B inherits from A
 class B < A
 
   attr_accessor :value
